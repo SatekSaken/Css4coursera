@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой проект</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Сброс */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: #000;
+      color: #fff;
+      padding: 8px 12px;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* Навигация */
+    nav {
+      background-color: #333;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      padding: 15px 0;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #f0a500;
+    }
+
+    /* Общий контейнер */
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    /* Галерея */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 2px solid #ccc;
+      padding: 8px;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery img:nth-child(even) {
+      border-radius: 50%;
+    }
+
+    /* About (flex пример) */
+    .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .about-box {
+      flex: 1 1 300px;
+      border: 2px solid #444;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f5f5f5;
+      transition: background 0.3s;
+    }
+
+    .about-box:hover {
+      background: #e0e0e0;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    /* Навигация по секциям */
+    [id^="page-"] {
+      scroll-margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to Main Content</a>
+
+  <!-- Навигация -->
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="#page-home">Главная</a></li>
+      <li><a href="#page-about">О нас</a></li>
+      <li><a href="#page-gallery">Галерея</a></li>
+    </ul>
+  </nav>
+
+  <!-- Основной контент -->
+  <main id="main">
+
+    <!-- Главная страница -->
+    <section id="page-home">
+      <h1>Добро пожаловать!</h1>
+      <p style="text-align: center;">Этот сайт демонстрирует знания HTML, CSS, доступности, flex и grid. Всё оформлено с использованием современных практик и рекомендаций.</p>
+    </section>
+
+    <!-- О нас -->
+    <section id="page-about">
+      <h2>О нас</h2>
+      <div class="about-flex">
+        <div class="about-box">
+          <h3>Наша миссия</h3>
+          <p>Создавать доступные и красивые сайты, которые легко использовать всем пользователям.</p>
+        </div>
+        <div class="about-box">
+          <h3>Наш подход</h3>
+          <p>Мы используем лучшие практики веб-разработки: семантический HTML, гибкий CSS и адаптивный дизайн.</p>
+        </div>
+        <div class="about-box">
+          <h3>Контакты</h3>
+          <p>Свяжитесь с нами по email@example.com или через наши соцсети.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="page-gallery">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/400x250?text=Фото+1" alt="Фото 1">
+        <img src="https://via.placeholder.com/400x250?text=Фото+2" alt="Фото 2">
+        <img src="https://via.placeholder.com/400x250?text=Фото+3" alt="Фото 3">
+        <img src="https://via.placeholder.com/400x250?text=Фото+4" alt="Фото 4">
+        <img src="https://via.placeholder.com/400x250?text=Фото+5" alt="Фото 5">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Мой сайт. Все права защищены.
+  </footer>
+
+</body>
+</html>
